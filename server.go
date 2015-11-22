@@ -401,10 +401,10 @@ func planUber(rw http.ResponseWriter, req *http.Request, p httprouter.Params){
         fmt.Println(rUber.StartingFromLocationID);
 
     var tripOpt ReqOpt;
-    tripOpt.ServerToken= "S37TkXJu1TBNbDea22MxgIAjoM1C__fJ3r6vbQ-5";
-    tripOpt.ClientId= "5-BNiHDpt1CZvQoWd2G2vV2GSvSnIu2j";
-    tripOpt.ClientSecret= "P5qyGJI-sJw5m-s2kFHljzg59kccexZ8qkbaL44P";
-    tripOpt.AppName= "CMPE273-A3";
+    tripOpt.ServerToken= " ";
+    tripOpt.ClientId= " ";
+    tripOpt.ClientSecret= " ";
+    tripOpt.AppName= " ";
     tripOpt.BaseUrl= "https://sandbox-api.uber.com/v1/";
     
 
@@ -599,10 +599,10 @@ func updateUber(rw http.ResponseWriter, req *http.Request, p httprouter.Params){
     cTrip.Status="requesting";
 
     var tripOpt ReqOpt;
-    tripOpt.ServerToken= "GGELRiCfO9k4LDeWNxveqD_S5WCjG7Mi6u-MgxoQ";
-    tripOpt.ClientId= "qH0YwsFfQF9-ZQEDTyQ3-YRC4-uHegqE";
-    tripOpt.ClientSecret= "5uaB6y3W5IBJnaGsXWZ2qTtKNd-VayZBTmC7Nawm";
-    tripOpt.AppName= "sayaleeagashe";
+    tripOpt.ServerToken= " ";
+    tripOpt.ClientId= " ";
+    tripOpt.ClientSecret= " ";
+    tripOpt.AppName= " ";
     tripOpt.BaseUrl= "https://sandbox-api.uber.com/v1/";
     client :=Create(&tripOpt);
 
@@ -628,7 +628,7 @@ func updateUber(rw http.ResponseWriter, req *http.Request, p httprouter.Params){
     uReq.ProductID=prodid;
     buf, _ := json.Marshal(uReq)
     body := bytes.NewBuffer(buf)
-    url := fmt.Sprintf(UberUrl, "requests?","access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZXMiOlsicmVxdWVzdCJdLCJzdWIiOiI5MjY3N2VlZC04MWIxLTQwYzctYmY4ZC1kOTMxMDQxMmIxZTkiLCJpc3MiOiJ1YmVyLXVzMSIsImp0aSI6IjY4MGViNjFmLWFjNjgtNDI3YS04YWM1LTgxMjcyNzFlZGQyNSIsImV4cCI6MTQ1MDc1Mzk3NywiaWF0IjoxNDQ4MTYxOTc3LCJ1YWN0IjoiZFppS2FaMGhXcGl6R25DOVAwU2prS3U5UlZLNWFrIiwibmJmIjoxNDQ4MTYxODg3LCJhdWQiOiJfZnh6YldrbHd0UW4teGFDM3ZjSHRPNXdkRnJfMkFzQiJ9.gmkvmQG081LF6wXWgM-5I1mrHYGgRo_3DUgxmDpO_xo3AlzyvQm5Vl5Ro2BAbxG-9HGmoXm5D-tbt0H6iT2x_tLw2zDkfU2wJ6-8GB-Vjgx4rEz974G6ktfB8I0I7pq_4ATCbds7J3ayLOH0vqKTExodtWY8N_onUMCuf5GsvwL9UcDKegpG8Oq0gZLcXYeMMywmuC6ZJu6s0MgGObqLAHJRZTbm5e2hDaOY_5pBHLG_PkIML7WOQ3UAWIUuWLBVeQ2GjCYY4NIipd9xyozXniK7d1GDJWKHhU0Fe1wn6-QPvoKt87wGX70HK-Ht36zer7PMlUqzLtpSF4LEfYf3eg")
+    url := fmt.Sprintf(UberUrl, "requests?","access_token= ")
     res, err := http.Post(url,"application/json",body)
     if err != nil {
         fmt.Println(err)
