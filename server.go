@@ -628,7 +628,7 @@ func updateUber(rw http.ResponseWriter, req *http.Request, p httprouter.Params){
     uReq.ProductID=prodid;
     buf, _ := json.Marshal(uReq)
     body := bytes.NewBuffer(buf)
-    url := fmt.Sprintf(UberUrl, "requests?","access_token= ")
+    url := fmt.Sprintf(UberUrl, "requests?","access_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZXMiOlsicmVxdWVzdCJdLCJzdWIiOiJjZGJmZDM4NC1hZTI0LTRmNTYtYmQ1NC1lODI0YzdkMjk3NjkiLCJpc3MiOiJ1YmVyLXVzMSIsImp0aSI6ImI4NTIzNjA3LWEwYzktNDFiZS1iNjQ3LWM4MWM3ZDMyMWQ5MiIsImV4cCI6MTQ1MDc1MzE2MywiaWF0IjoxNDQ4MTYxMTYyLCJ1YWN0IjoiUUszbm15RncxbVd0N3hBa1dubDdsUkl4Vmo4Sm1BIiwibmJmIjoxNDQ4MTYxMDcyLCJhdWQiOiJxSDBZd3NGZlFGOS1aUUVEVHlRMy1ZUkM0LXVIZWdxRSJ9.RvQZuyK9vQd3bsPzIpVNoJ31wkT9Qn5kmABY8ENkXN9cTRU3CRBmRbkU_Uh9WQugcPTqpYTdRdkAg6ELlDt8b4qZSiyE1YBlGcF2-Hq6iueZ7k44GMc8oIbpQl3v_TAq8kndLLFrGcGkxMBrMuiKYV_SsrMoP5o2LPxANNmT1R8nz6mpGHspljYVb5kw1azv6kkHxSvxuarXr7IKj4jV0L1qI7hWk2nnH8nVOHouFDgSAPRdo3KOjNGu1eEoo2lkY63SL3LLoJ66F4zM8DR1CGiQ1JChuolVy1fYzhm9Jro5yqUSDC9JX-erXESD99fhMFIFjkNDtLgm_ipcblmvVg")
     res, err := http.Post(url,"application/json",body)
     if err != nil {
         fmt.Println(err)
